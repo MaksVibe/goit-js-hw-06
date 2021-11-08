@@ -29,11 +29,3 @@ gallery.insertAdjacentHTML("afterbegin", liMarkup);
 gallery.style.display = "inline-flex";
 gallery.style.width = "90%";
 gallery.style.gap = "20px";
-// gallery.classList.add("grid");
-// liMarkup.
-// gallery.classList.add(
-//   "display: grid; grid-template-columns: 200px 200px 200px; grid-gap: 10 px;"
-// );
-// display: grid;
-// grid-template-columns: 200px 200px 200px;
-// grid-gap: 10 px;
