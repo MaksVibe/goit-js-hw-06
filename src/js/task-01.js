@@ -25,8 +25,8 @@ console.log("Elements:", elements2);
 // Категория Technologies
 const technologies = document.querySelector("#categories").childNodes[5];
 
-const category3 = products.childNodes[1].textContent;
+const category3 = technologies.childNodes[1].textContent;
 console.log("Category:", category3);
 
-const elements3 = products.childNodes[3].children.length;
+const elements3 = technologies.childNodes[3].children.length;
 console.log("Elements:", elements3);
