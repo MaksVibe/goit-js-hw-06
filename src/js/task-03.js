@@ -17,14 +17,17 @@ const images = [
 ];
 
 const gallery = document.querySelector(".gallery");
-const liMarkup = images.map(
-  (image) =>
-    `
-    <li>
-    <img src="${image.url}" alt="${image.alt}" width="100%">
-    </li>
-    `
-);
+const liMarkup = images
+  .map(({ url, alt }) => {
+    const liRef = document.createElement("li");
+    gallery.append(liRef);
+    const imgRef = document.createElement("img");
+    imgRef.src = url;
+    imgRef.alt = alt;
+    imgRef.classList.add("img");
+    liRef.append(imgRef);
+  })
+  .join("");
 gallery.insertAdjacentHTML("afterbegin", liMarkup);
 gallery.style.display = "inline-flex";
 gallery.style.width = "90%";
