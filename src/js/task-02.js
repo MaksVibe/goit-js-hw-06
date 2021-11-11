@@ -7,9 +7,12 @@ const ingredients = [
   "Condiments",
 ];
 
-for (let ingradient of ingredients) {
+const ingrs = document.querySelector("#ingredients");
+
+const ingrList = ingredients.map((ingredient) => {
   const ingr = document.createElement("li");
-  ingr.textContent = ingradient;
-  ingr.classList.add("item");
-  document.querySelector("#ingredients").append(ingr);
-}
+  ingr.textContent = ingredient;
+  return ingr;
+});
+
+ingrs.append(...ingrList);
