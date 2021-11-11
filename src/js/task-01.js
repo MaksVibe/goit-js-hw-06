@@ -1,32 +1,36 @@
 "use strict";
 
-// Количество категорий
-const countItems = document.querySelector("#categories").children.length;
-console.log("Number of categories:", countItems);
+console.log(
+  "Number of categories:",
+  document.querySelector("#categories").children.length
+);
 
-// Категория Animals
-const animals = document.querySelector("#categories").childNodes[1];
+const categories = document.querySelectorAll("#categories");
+let categ = document.querySelectorAll(".item");
 
-const category1 = animals.firstElementChild.textContent;
-console.log("Category:", category1);
+// first-, lastElementChild
+for (const item of categ) {
+  console.log("Category:", item.firstElementChild.textContent);
+  console.log("Elements:", item.lastElementChild.children.length);
+}
 
-const elements1 = animals.childNodes[3].children.length;
-console.log("Elements:", elements1);
+/*
+// childNodes
+for (const item of categ) {
+  console.log("Category:", item.childNodes[1].textContent);
+  console.log("Elements:", item.childNodes[3].children.length);
+}
 
-// Категория Products
-const products = document.querySelector("#categories").childNodes[3];
 
-const category2 = products.childNodes[1].textContent;
-console.log("Category:", category2);
+Через обычный for
+for (let item = 0; item < categ.length; item += 1) {
+  console.log("Category:", categ[item].firstElementChild.textContent);
+  console.log("Elements:", categ[item].childNodes[3].children.length);
+}
 
-const elements2 = products.childNodes[3].children.length;
-console.log("Elements:", elements2);
-
-// Категория Technologies
-const technologies = document.querySelector("#categories").childNodes[5];
-
-const category3 = technologies.childNodes[1].textContent;
-console.log("Category:", category3);
-
-const elements3 = technologies.childNodes[3].children.length;
-console.log("Elements:", elements3);
+Через for Each
+categ.forEach((item) => {
+  console.log("Category:", item.firstElementChild.textContent);
+  console.log("Elements:", item.childNodes[3].children.length);
+});
+*/
